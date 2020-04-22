@@ -57,26 +57,25 @@ class SearchAPIView(APIView):
             dep_time = pair[0].dep_time.__str__()
             arr_time = pair[1].arr_time.__str__()
             bus_config = pair[0].bus_config.__str__()
-            from_order = pair[0].order
-            to_order = pair[1].order 
+            from_order = pair[0].order.__str__()
+            to_order = pair[1].order.__str__()
             data_dict = dict(
-                route_group = route_group.__str__(),
-                from_source = from_source,
-                to_dest = to_dest,
-                bus_config = bus_config,
-                dep_date = on_date.__str__(),
-                arr_date = on_date.__str__(),
-                dep_time = dep_time,
-                arr_time = arr_time,
-                from_order = from_order,
-                to_order = to_order
+                route_group= route_group.__str__(),
+                from_source=from_source,
+                to_dest= to_dest,
+                bus_config= bus_config,
+                dep_date=on_date.__str__(),
+                arr_date= on_date.__str__(),
+                dep_time= dep_time,
+                arr_time= arr_time,
+                from_order= from_order,
+                to_order= to_order
             )
         
             result_list.append(data_dict)
             
         
-
-        return JsonResponse(json.dumps(result_list),safe=False)
+        return Response(json.dumps(result_list))
 
 def get_routes_by_source(source):
     source_city_id = get_city_id(source)
