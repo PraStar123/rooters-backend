@@ -1,5 +1,5 @@
 # Documentation for deploying django project  
-The follwoing explains deploying a python django project as an end to end backend service. To complete the whole process, if you have a domain or sub-domain, route it to the ip address of the deployment server.   
+The following explains deploying a python django project as an end to end backend service. To complete the whole process, if you have a domain or sub-domain, route it to the ip address of the deployment server.   
 
 ## Requirements
 Python requirements. The current uses python 3.6. Create a virtualenv *demoenv* using the following commands. 
