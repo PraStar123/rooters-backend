@@ -65,7 +65,8 @@ server {
     location = /favicon.ico { access_log off; log_not_found off; }
 
     location /static/ {
-            root /home/ubuntu/myproject;  # This should be the parent directory of the django project, i.e. one achieved using `django-admin startproject`
+            root /home/ubuntu/myproject;  # This should be the parent directory of the django project, 
+						# i.e. one achieved using `django-admin startproject`
     }
 
     location / {
