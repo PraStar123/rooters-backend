@@ -45,6 +45,7 @@ Also, in the same file add the following
 `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')`
 
 Run from inside the parent demo folder, 
+
 `./manage.py makemigrations`
 
 `./manage.py migrate`
