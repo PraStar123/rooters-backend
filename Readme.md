@@ -112,7 +112,8 @@ stderr_logfile=/var/log/demo.err.log
 stdout_logfile=/var/log/demo.out.log
 ```
 
-Do the following everytime you have updated and saved the above file for the changes to takae place. 
+Do the following everytime you have updated and saved the above file for the changes to take place. 
+
 `sudo supervisorctl reread`
 
 `sudo supervisorctl update`
