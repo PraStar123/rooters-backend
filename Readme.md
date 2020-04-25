@@ -85,7 +85,8 @@ server {
     }
 }
 ```
-After the file is created, use the following command/ 
+After the file is created, use the following command
+
 `sudo ln -s /etc/nginx/sites-available/demo /etc/nginx/sites-enabled`
 
 `sudo nginx -t` to check if nginx is configured properly
