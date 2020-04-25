@@ -3,6 +3,7 @@ The following explains deploying a python django project as an end to end backen
 
 ## Requirements
 Python requirements. The current uses python 3.6. Create a virtualenv *demoenv* using the following commands. 
+
 `sudo apt-get install virtualenv`
 
 `virtualenv --python=/usr/bin/python3 demoenv`
@@ -23,6 +24,7 @@ Either create a new project :
 `django-admin startproject demo` 
 
 or import an existing code if you are setting up a production server. 
+
 `git clone https://github.com/PraStar123/rooters-backend.git`
 
 ## Django project configurations. 
@@ -37,7 +39,6 @@ and replace its default parameter by the path to the CloudSQL (as below) or whic
             'HOST': '34.70.188.15',                    
             'PORT': '',                      
  }
-
 ```
 
 Also, in the same file add the following
@@ -45,8 +46,11 @@ Also, in the same file add the following
 
 Run from inside the parent demo folder, 
 `./manage.py makemigrations`
+
 `./manage.py migrate`
+
 `./manage.py collectstatic`
+
 `./manage.py runserver`
 
 
@@ -56,7 +60,9 @@ Gunicorn wsgi will be used for deployment. It is an http interface for the serve
 `pip install gunicorn`
 
 Inside parent demo folder, 
-`gunicorn demo.wsgi` will start a gateway for the project to be started with gunicorn. Use parameter `--workers n` for using *n* number of worker nodes for processing incoming request on the production server. 
+`gunicorn demo.wsgi` will start a gateway for the project to be started with gunicorn. 
+
+Use parameter `--workers n` for using *n* number of worker nodes for processing incoming request on the production server. 
 
 
 ## Configuring Nginx 
