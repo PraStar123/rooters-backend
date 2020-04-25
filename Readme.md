@@ -100,6 +100,7 @@ Use this `gunicorn --bind unix:/home/ubuntu/demo/demo.sock demo.wsgi` from paren
 
 ## Installing supervisor
 To install, run `sudo apt-get install supervisord`
+
 To set up the project, create a file `sudo nano /etc/supervisor/conf.d/demo.conf`
 
 ```
